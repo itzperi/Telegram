@@ -1,15 +1,4 @@
-const { Client, GatewayIntentBits, EmbedBuilder, SlashCommandBuilder, REST, Routes } = require('discord.js');
-const express = require('express');
-require('dotenv').config();
 
-// Initialize Express app for health check
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Health check endpoint
-app.get('/', (req, res) => {
-    res.json({ status: 'Bot is running!', timestamp: new Date().toISOString() });
-});
 
 app.listen(PORT, () => {
     console.log(`Health check server running on port ${PORT}`);
